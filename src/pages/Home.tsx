@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Header } from '../src/components/Header';
-import { Hero } from '../src/components/Hero';
-import { Projects } from '../src/components/Projects';
-import { Skills } from '../src/components/Skills';
-import { About } from '../src/components/About';
-import { Footer } from '../src/components/Footer';
+import { Header } from '../components/Header';
+import { Hero } from '../components/Hero';
+import { Projects } from '../components/Projects';
+import { Skills } from '../components/Skills';
+import { About } from '../components/About';
+import { Footer } from '../components/Footer';
 
 export default function App() {
   const [theme, setTheme] = useState<'light' | 'sakura'>('light');

@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { ProjectCard } from './ProjectCard';
+import { HashLink } from 'react-router-hash-link';
 
 export function Projects() {
   const projects = [
@@ -63,14 +64,16 @@ export function Projects() {
           ))}
         </div>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-4">
         <motion.a
           href="projects-page"
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.98 }}
           className="px-6 py-3 rounded-full bg-gradient-to-r from-[#FFB7C5] to-[#FFC9D6] text-white shadow-lg shadow-[#FFB7C5]/30 cursor-pointer"
         >
-          查看全部作品
+          <HashLink to="/projects-page" smooth>
+            查看全部作品
+          </HashLink>
         </motion.a>
       </div>
     </section>

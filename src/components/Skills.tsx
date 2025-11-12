@@ -8,14 +8,14 @@ export function Skills() {
       subtitle: '前端開發',
       icon: Code2,
       color: '#FFB7C5',
-      skills: ['React', 'JavaScript', 'Next.js', 'Tailwind CSS', 'SCSS', 'TypeScript'],
+      skills: ['React', 'TypeScript / JavaScript', 'Next.js / Vite / CRA', 'Tailwind / SCSS /CSS'],
     },
     {
       title: 'Backend',
       subtitle: '後端開發',
       icon: Database,
       color: '#B8D4C8',
-      skills: ['Python', 'Flask', 'Django', 'Java', 'MySQL'],
+      skills: ['Python / Java', 'Flask / Django', 'MySQL'],
     },
     {
       title: 'Tools',
@@ -29,7 +29,7 @@ export function Skills() {
       subtitle: '其他技能',
       icon: Palette,
       color: '#C5A3FF',
-      skills: ['SEO', 'Responsive Design', 'Typography', 'Color Theory'],
+      skills: ['SEO', 'Responsive Design', 'Figma', 'Photoshop'],
     },
   ];
 

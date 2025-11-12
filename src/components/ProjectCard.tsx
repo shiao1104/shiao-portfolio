@@ -3,6 +3,7 @@ import { ExternalLink, ShieldQuestionIcon } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Badge } from './ui/badge';
 import { useState } from 'react';
+import { HashLink } from 'react-router-hash-link';
 
 interface ProjectCardProps {
   title: string;
@@ -10,8 +11,8 @@ interface ProjectCardProps {
   image: string;
   tags: string[];
   badge?: string;
-  demoUrl?: string;
-  githubUrl?: string;
+  readmore?: string;
+  link?: string;
 }
 
 export function ProjectCard({
@@ -20,8 +21,8 @@ export function ProjectCard({
   image,
   tags,
   badge,
-  demoUrl,
-  githubUrl,
+  readmore,
+  link,
 }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -51,29 +52,31 @@ export function ProjectCard({
             </div>
           )}
 
-          {/* Hover Tooltip */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: isHovered ? 1 : 0 }}
             className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center pb-6 gap-3"
           >
-            {demoUrl && (
+            {readmore && (
               <motion.a
-                href={demoUrl}
                 initial={{ y: 20 }}
                 animate={{ y: isHovered ? 0 : 20 }}
                 transition={{ delay: 0.05 }}
                 whileHover={{ scale: 1.05 }}
                 className="px-4 py-2 bg-white rounded-full text-sm flex items-center gap-2 shadow-lg cursor-pointer"
               >
-                <ShieldQuestionIcon className="w-4 h-4" />
-                專案說明
+                <HashLink to={readmore}
+                  className='flex items-center gap-2'>
+                  <ShieldQuestionIcon className="w-4 h-4" />
+                  專案說明
+                </HashLink>
               </motion.a>
             )}
-            {githubUrl && (
+            {link && (
               <motion.a
-                href={githubUrl}
+                href={link}
                 initial={{ y: 20 }}
+                target="_blank"
                 animate={{ y: isHovered ? 0 : 20 }}
                 transition={{ delay: 0.1 }}
                 whileHover={{ scale: 1.05 }}

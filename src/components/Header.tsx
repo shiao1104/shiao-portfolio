@@ -1,6 +1,6 @@
-import { link } from 'fs';
 import { Moon, Sun } from 'lucide-react';
 import { motion } from 'motion/react';
+import { HashLink } from 'react-router-hash-link';
 
 interface HeaderProps {
   theme: 'light' | 'sakura';
@@ -15,19 +15,19 @@ export function Header({ theme, toggleTheme }: HeaderProps) {
     },
     {
       name: '專案作品',
-      link: 'projects-page'
+      link: '/projects-page'
     },
     {
       name: '我的技能',
-      link: 'skills'
+      link: '/#skills'
     },
     {
       name: '有關於我',
-      link: 'about'
+      link: '/#about'
     },
     {
       name: '聯絡方式',
-      link: 'contact'
+      link: '/#contact'
     }
   ];
 
@@ -58,7 +58,13 @@ export function Header({ theme, toggleTheme }: HeaderProps) {
               whileHover={{ y: -2 }}
               className="text-sm transition-colors hover:text-[#FFB7C5] cursor-pointer"
             >
-              {item.name}
+              <HashLink
+                to={item.link}
+                smooth
+                className="text-sm transition-colors hover:text-[#FFB7C5] cursor-pointer"
+              >
+                {item.name}
+              </HashLink>
             </motion.a>
           ))}
         </nav>

@@ -1,15 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Header } from '../src/components/Header';
-import { Hero } from '../src/components/Hero';
-import { Projects } from '../src/components/Projects';
-import { Skills } from '../src/components/Skills';
-import { About } from '../src/components/About';
-import { Footer } from '../src/components/Footer';
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
 import { motion } from 'motion/react';
-import { ProjectCard } from '../src/components/ProjectCard';
-import { projects } from '../lib/data/projectsData';
+import { ProjectCard } from '../components/ProjectCard';
+import { projects } from '../../lib/data/projectsData';
 
-export default function ProjectsDetail() {
+export default function ProjectsPage() {
   const [theme, setTheme] = useState<'light' | 'sakura'>('light');
 
   useEffect(() => {
@@ -40,7 +36,6 @@ export default function ProjectsDetail() {
 
       <main>
         <section id="projects" className="py-20 px-6">
-            ssssssssssss
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

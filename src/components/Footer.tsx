@@ -3,15 +3,14 @@ import { Github, Linkedin, Mail, Twitter, Heart } from 'lucide-react';
 
 export function Footer() {
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Mail, href: '#', label: 'Email' },
+    // { icon: Github, href: '#', label: 'GitHub' },
+    // { icon: Linkedin, href: '#', label: 'LinkedIn' },
+    // { icon: Twitter, href: '#', label: 'Twitter' },
+    { icon: Mail, href: 'mailto:chlin9900@gmail.com', label: 'Email' },
   ];
 
   return (
     <footer id="contact" className="relative py-12 px-6 bg-[#F5F0EB]/30 dark:bg-[#1A0F1B]/30 overflow-hidden">
-      {/* Subtle Japanese pattern background */}
       <div className="absolute inset-0 opacity-5 dark:opacity-10">
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle, #FFB7C5 1px, transparent 1px)`,
@@ -29,7 +28,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-2xl">Let's Connect</h3>
             <p className="text-gray-600 dark:text-gray-300 max-w-md mx-auto">
-              I'd love to hear from you! Feel free to reach out for collaborations or just a friendly chat ✨
+              歡迎聯絡 ✨
             </p>
           </div>
 
@@ -70,7 +69,7 @@ export function Footer() {
             >
               <Heart className="w-4 h-4 text-[#FFB7C5] fill-[#FFB7C5]" />
             </motion.div>
-            <span>by Your Name</span>
+            <span>Hsiao-Chien, Lin</span>
           </motion.div>
 
           <p className="text-xs text-gray-500 dark:text-gray-400">
